@@ -43,7 +43,7 @@ if [ "$1" == 'supervisord' ]; then
         fi
     fi
 
-    chown -R $UNISON_OWNER $UNISON_DIR
+    chown -R $UNISON_OWNER:users $UNISON_DIR
 
     # see https://wiki.alpinelinux.org/wiki/Setting_the_timezone
     if [ -n ${TZ} ] && [ -f /usr/share/zoneinfo/${TZ} ]; then
